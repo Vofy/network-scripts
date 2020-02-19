@@ -27,7 +27,7 @@ do
 	do
 		echo "Setting interface ${GREEN}$INTERFACE${NC} up        - ${SHORT_SLEEP}s"
 		ip link set dev $INTERFACE up
-		sleep $SHORT_SLEEP
+		sleep $LONG_SLEEP
 
 		echo "Setting interface ${RED}$INTERFACE${NC} down"
 		ip link set dev $INTERFACE down
@@ -35,14 +35,4 @@ do
 
 		echo
 	done
-
-	echo "Setting interface ${GREEN}$INTERFACE${NC} up        - ${LONG_SLEEP}s"
-	ip link set dev $INTERFACE up
-	sleep $LONG_SLEEP
-
-	echo "Setting interface ${RED}$INTERFACE${NC} down"
-	ip link set dev $INTERFACE down
-	sleep $SHORT_SLEEP
-
-	echo
 done
