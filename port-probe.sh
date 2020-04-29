@@ -3,7 +3,7 @@
 SHORT_SLEEP=2
 LONG_SLEEP=10
 
-YELLOW='\e[0;11m'
+PURPLE='\e[0;35m'
 RED='\e[0;31m'
 GREEN='\e[0;32m'
 NC='\e[0m'
@@ -20,12 +20,12 @@ exitCheck () {
 }
 
 printf "
-Starting ${YELLOW}PortProbe${NC} script by ${YELLOW}VOFY | TECHNOLOGIES (Tomáš Batelka)${NC}
+Starting ${PURPLE}PortProbe${NC} script by ${PURPLE}VOFY | TECHNOLOGIES (Tomáš Batelka)${NC}
 ----------------------------------------------------------------
-For exit script press ${YELLOW}q${NC} and wait if you break this script interface can still be set on down\n\n"
+For exit script press ${PURPLE}q${NC} and wait if you break this script interface can still be set on down\n\n"
 
 INTERFACE="$(ip link | awk -F: '$0 !~ "lo|vir|wl|^[^0-9]"{print $2;getline}')"
-printf "Wired interface detected ${YELLOW}${INTERFACE}${NC}\n\n"
+printf "Wired interface detected ${PURPLE}${INTERFACE}${NC}\n\n"
 
 while true
 do
