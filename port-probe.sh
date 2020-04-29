@@ -22,14 +22,14 @@ exitCheck () {
 printf "
 Starting ${YELLOW}port-probe${NC} script by ${YELLOW}VOFY | TECHNOLOGIES (Tomáš Batelka)${NC}
 ----------------------------------------------------------------
-For exit script press ${YELLOW}q${NC} and wait if you break this script interface can still be set on down\n\n"
+For exit script press ${YELLOW}q${NC} and wait (if you break this script interface can still be set on down)\n\n"
 
 INTERFACE="$(ip link | awk -F: '$0 !~ "lo|vir|wl|^[^0-9]"{print $2;getline}')"
 printf "Wired interface detected ${YELLOW}${INTERFACE}${NC}\n\n"
 
 while true
 do
-	printf "Setting interface ${INTERFACE} ${RED}down${NC}      - ${SHORT_SLEEP}s\n"
+    printf "Setting interface ${INTERFACE} ${RED}down${NC}      - ${SHORT_SLEEP}s\n"
     ip link set dev ${INTERFACE} down
     sleep ${SHORT_SLEEP}
     exitCheck
