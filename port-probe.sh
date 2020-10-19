@@ -20,7 +20,7 @@ exitCheck () {
 }
 
 printf "
-Starting ${YELLOW}port-probe${NC} script by ${YELLOW}VOFY | TECHNOLOGIES (Tomáš Batelka)${NC}
+Starting ${YELLOW}port-probe${NC} script by ${YELLOW}Tomáš Batelka${NC}
 ----------------------------------------------------------------
 For exit script press ${YELLOW}q${NC} and wait (if you break this script interface can still be set on down)\n\n"
 
